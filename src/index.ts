@@ -9,12 +9,12 @@ app.use(cookieParser("my secret"));
 // Import public route
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// // PUBLIC ROUTES
-// import route from "./public_routes";
-// app.use(route);
+// PUBLIC ROUTES
+import route from "./public_routes";
+app.use(route);
 
 // API ROUTES
-import userRouter from "./routes/Users";
+import userRouter from "./routes/users";
 app.use("/api/users", userRouter);
 
 const PORT = process.env.PORT || 8000;

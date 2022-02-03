@@ -3,7 +3,7 @@ import { Response, Request } from "express";
 import User from "../models/Users";
 import { PasswordHash } from "../services/passwordHash";
 
-export default class UserClass implements UserInterface {
+export default class UserController implements UserInterface {
   public id!: number;
   public email!: string;
   public password!: string;
